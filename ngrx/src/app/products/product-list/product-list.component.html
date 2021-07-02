@@ -1,0 +1,15 @@
+<div class="error" *ngIf="error">{{ error }}</div>
+<div class="products-list">
+    <div class="product-entry" *ngFor="let product of products" (click)="productSelected.next(product)" [class.selected]="product == selectedProduct">
+        <div class="name">{{ product.name }}
+            <span *ngIf="showCode" class="tags">({{getTags(product)}})</span>
+        </div>
+        <div class="price">{{ product.price }}$</div>
+    </div>
+</div>
+
+<label>
+    Show product codes
+    <input type="checkbox" [ngModel]="showCode" (ngModelChange)="showCodeChanged.next($event)" />
+    <button (click)="initializeNewProduct.next()">Add new</button>
+</label>

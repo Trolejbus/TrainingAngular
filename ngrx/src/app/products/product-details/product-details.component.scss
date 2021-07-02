@@ -1,0 +1,15 @@
+.form-control {
+    display: flex;
+    margin-bottom: 10px;
+
+    label {
+        width: 100px;
+        display: block;
+    }
+    
+    input {
+        &.ng-invalid.ng-touched {
+            border-color: red;
+        }
+    }
+}

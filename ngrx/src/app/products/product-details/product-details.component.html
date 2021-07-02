@@ -1,0 +1,15 @@
+<form *ngIf="product != null" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <h2>Product details</h2>
+    <div class="form-control">
+        <label>Name:</label> <input type="text" formControlName="name" />
+    </div>
+    <div class="form-control">
+        <label>Tags:</label> <input type="text" formControlName="tags" />
+    </div>
+    <div class="form-control">
+        <label>Price:</label>
+        <input type="text" formControlName="price" />
+    </div>
+    <input type="submit" value="Save" />
+    <button (click)="cancel()">Cancel</button>
+</form>

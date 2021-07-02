@@ -1,0 +1,22 @@
+
+<div class="page-container">
+    <div class="products-list-wrapper">
+        <h2>Product List</h2>
+        <app-product-list
+            [error]="error$ | async"
+            [showCode]="(showCode$ | async) || true"
+            [products]="(products$ | async) || []"
+            [selectedProduct]="selectedProduct$ | async"
+            (initializeNewProduct)="add()"
+            (productSelected)="select($event)"
+            (showCodeChanged)="showCodeChanged($event)"
+        ></app-product-list>
+    </div>
+    <div class="products-details-wrapper">
+        <app-product-details
+            [product]="selectedProduct$ | async"
+            (onCancel)="onFormCancelled()"
+            (onSaved)="onFormSaved($event)"
+        ></app-product-details>
+    </div>
+</div>

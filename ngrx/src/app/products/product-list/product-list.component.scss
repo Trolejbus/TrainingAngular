@@ -1,0 +1,35 @@
+.products-list {
+    width: 300px;
+    border: 1px solid black;
+
+    .product-entry {
+        display: flex;
+        padding: 5px;
+        cursor: pointer;
+
+        &:nth-child(2n) {
+            background-color: #eee;
+        }
+
+        &:hover, &.selected {
+            background-color: lightskyblue;
+        }
+
+        .name {
+            flex: 1 1 auto;
+
+            .tags {
+                color: gray;
+            }
+        }
+
+        .price {
+            flex: 0 0 auto;
+        }
+    }
+}
+
+
+.error {
+    color: red;
+}
