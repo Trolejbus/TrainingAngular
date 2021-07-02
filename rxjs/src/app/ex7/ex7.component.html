@@ -1,0 +1,6 @@
+{{ errorMessage }}
+<div *ngIf="products$ | async as errorProducts">
+    <div *ngFor="let error of errorProducts">
+        {{ error.number }} <br/>
+    </div>
+</div>

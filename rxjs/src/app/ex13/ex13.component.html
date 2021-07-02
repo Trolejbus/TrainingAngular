@@ -1,0 +1,4 @@
+<button (click)="action()">Add</button>
+<div *ngFor="let product of productsWithAdd$ | async">
+    {{ product }}
+</div>

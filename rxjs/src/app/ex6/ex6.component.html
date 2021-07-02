@@ -1,0 +1,17 @@
+<div *ngIf="errorProductsReplace$ | async as errorProducts">
+    <div *ngFor="let error of errorProducts">
+        {{ error.number }} <br/>
+    </div>
+</div>
+<hr />
+<!--<div *ngIf="errorProductsRethrow$ | async as errorProducts">
+    <div *ngFor="let error of errorProducts">
+        {{ error.number }} <br/>
+    </div>
+</div>-->
+<hr />
+<div *ngIf="errorProductsEmpty$ | async as errorProducts">
+    <div *ngFor="let error of errorProducts">
+        {{ error.number }} <br/>
+    </div>
+</div>

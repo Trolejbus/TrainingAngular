@@ -1,0 +1,25 @@
+<div class=layout>
+    <div class="navigation">
+        <a [routerLink]="['demo1']" routerLinkActive="active"><fa-icon [icon]="faStar"></fa-icon> Demo 1</a>
+        <a [routerLink]="['demo2']" routerLinkActive="active"><fa-icon [icon]="faStar"></fa-icon> Demo 2</a>
+        <a [routerLink]="['ex1']" routerLinkActive="active">Example 1 (Of, from, Observer, Observable)</a>
+        <a [routerLink]="['ex2']" routerLinkActive="active">Example 2 (Interval, fromEvent)</a>
+        <a [routerLink]="['ex3']" routerLinkActive="active">Example 3 (Map, tap)</a>
+        <a [routerLink]="['ex4']" routerLinkActive="active">Example 4 (Custom mapCond)</a>
+        <a [routerLink]="['ex5']" routerLinkActive="active">Example 5 (Async pipe)</a>
+        <a [routerLink]="['ex6']" routerLinkActive="active">Example 6 (Error handling)</a>
+        <a [routerLink]="['ex7']" routerLinkActive="active">Example 7 (Change detection)</a>
+        <a [routerLink]="['ex8']" routerLinkActive="active">Example 8 (Map)</a>
+        <a [routerLink]="['ex9']" routerLinkActive="active">Example 9 (Combination)</a>
+        <a [routerLink]="['ex10']" routerLinkActive="active">Example 10 (Combination2)</a>
+        <a [routerLink]="['ex11']" routerLinkActive="active">Example 11 (Reacting to action)</a>
+        <a [routerLink]="['ex12']" routerLinkActive="active">Example 12 (Initial value)</a>
+        <a [routerLink]="['ex13']" routerLinkActive="active">Example 13 (Adding)</a>
+        <a [routerLink]="['ex14']" routerLinkActive="active">Example 14 (Caching)</a>
+        <a [routerLink]="['ex15']" routerLinkActive="active">Example 15 (ConcatMap, MergeMap, SwitchMap)</a>
+    </div>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+

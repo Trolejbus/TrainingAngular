@@ -1,0 +1,31 @@
+<div>
+    <button class="btn btn-primary" (click)="add()">Add product</button>
+</div>
+<div class="row" *ngIf="products$ | async as products">
+    <div class="col-lg-5">
+        <table class="table table-striped table-hover product-table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Category</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <th scope="row">{{ product.id | slice:0:8 }}...{{ product.id | slice:28:32 }}</th>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.price | number:'1.2-2' }}$</td>
+                    <td>{{ product.category?.name }}</td>
+                    <td><fa-icon class="view-button" [icon]="faEye" (click)="selectProduct(product)"></fa-icon></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-7" *ngIf="productService.mode$ | async as mode">
+        <app-demo1details *ngIf="mode === Demo1Mode.Display"></app-demo1details>
+        <app-demo1form *ngIf="mode === Demo1Mode.Add"></app-demo1form>
+    </div>
+</div>
