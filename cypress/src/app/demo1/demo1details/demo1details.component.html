@@ -1,0 +1,18 @@
+<div class="product-details-container" *ngIf="selectedProduct$ | async as selectedProduct">
+    <h2>Selected Product - {{ selectedProduct.name }}</h2>
+    <div>
+        <span class="bold">Id:</span> {{ selectedProduct.id }}
+    </div>
+    <div>
+        <span class="bold">Name:</span> {{ selectedProduct.name }}
+    </div>
+    <div>
+        <span class="bold">Price:</span> {{ selectedProduct.price }}
+    </div>
+    <div>
+        <span class="bold">Category Id:</span> {{ selectedProduct.categoryId }}
+    </div>
+    <div>
+        <span class="bold">Category:</span> {{ selectedProduct.category?.name }}
+    </div>
+</div>
