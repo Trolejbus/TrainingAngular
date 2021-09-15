@@ -2,18 +2,18 @@
     <h1>Add new product</h1>
     <div>
         <label for="name">Name *</label>
-        <input #name type="text" formControlName="name">
+        <input #name type="text" formControlName="name" data-cy="name-input">
     </div>
     <div>
         <label for="price">Price *</label>
-        <input #price type="number" step="0.01" formControlName="price">
+        <input #price type="number" step="0.01" formControlName="price" data-cy="price-input">
     </div>
     <div>
         <label for="category">Category *</label>
-        <select #category name="cars" id="cars" formControlName="categoryId">
+        <select #category formControlName="categoryId" data-cy="category-input">
             <option *ngFor="let category of categoryService.categories$ | async" [value]="category.id">{{ category.name }}</option>
         </select>
     </div>
-    <button class="btn btn-primary" type="submit">Add product</button>
-    <button class="btn btn-primary" type="submit" (click)="cancel()">Cancel</button>
+    <button class="btn btn-primary" type="submit" data-cy="add-product-button">Add product</button>
+    <button class="btn btn-primary" type="submit" (click)="cancel()" data-cy="cancel-product-button">Cancel</button>
 </form>
